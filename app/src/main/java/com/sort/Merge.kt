@@ -1,7 +1,7 @@
 package com.sort
 
 fun main() {
-    val array = mutableListOf(1, 2, 2, 3, 4, 7, 8, 1, 9, 12, 15, 16, 66, 21, 11)
+    val array = mutableListOf(3, 1, 2, 5)
     println(divide(array))
 }
 
@@ -11,7 +11,9 @@ fun divide(arr: MutableList<Int>): MutableList<Int> {
     val middle = arr.size / 2
 
     val left = divide(arr.subList(0, middle))
+    println("left: $left")
     val right = divide(arr.subList(middle, arr.size))
+//    println("right: $right")
 
     return mergeList(left, right)
 }

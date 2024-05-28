@@ -8,7 +8,7 @@ fun main() {
 fun insertion(arr: IntArray): IntArray {
     for (i in 1 .. arr.lastIndex) {
         var head = i
-        while (head >= 0 && arr[head] < arr[head-1]) {
+        while (head > 0 && arr[head] < arr[head-1]) {
             val temp = arr[head]
             arr[head] = arr[head - 1]
             arr[head - 1] = temp
