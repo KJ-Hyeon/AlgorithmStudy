@@ -12,7 +12,6 @@ fun sortLogSort(logs: Array<String>) {
     val digitArr = mutableListOf<String>()
     val letterArr = mutableListOf<String>()
     val comparator = Comparator<String> { o1, o2 ->
-        println(o1.split(" ", limit = 2))
         if (o1.split(" ", limit = 2)[1].compareTo(o2.split(" ", limit = 2)[1]) == 0) {
             o1.split(" ", limit = 2)[0].compareTo(o2.split(" ", limit = 2)[0])
         } else {
